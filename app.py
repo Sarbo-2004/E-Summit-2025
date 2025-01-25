@@ -120,5 +120,5 @@ def download_ticket(unique_id):
     # Send the generated image as a response for download
     return send_file(image_path, download_name=f'ticket_{unique_id}.png', as_attachment=True)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__=="__main__":
+    app.run(host="0.0.0.0")    
