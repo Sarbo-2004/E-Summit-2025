@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-SUMMIT 2025</title>
+    <style>
+        /* Reset and General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* White text for contrast */
+            line-height: 1.6;
+            height: 100vh;
+            width: 100%;
+            background: url("{{ url_for('static', filename='assets/bg.jpg') }}") no-repeat center center/cover fixed;
+
+        }
+
+        /* Navbar Styling */
+        nav {
+            background: linear-gradient(135deg, #7b1fa2, #4a148c,0.1); /* Purple gradient */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .menu li {
+            margin: 0 10px;
+        }
+
+        nav .menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav .menu li a:hover {
+            color: #d1c4e9; /* Light purple on hover */
+        }
+
+        /* Main Content */
+        .content {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #d1c4e9; /* Light purple for heading */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds shadow to text for readability */
+        }
+        .hero{
+            margin-bottom: 15px;
+        }
+        .content a {
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #7b1fa2, #4a148c); /* Purple gradient button */
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content a:hover {
+            background: linear-gradient(135deg, #6a1b9a, #4a148c); /* Darker gradient on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo">
+            
+        </div>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/buy_ticket">Book Ticket</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to E-SUMMIT 2025</h1>
+        <div class="hero"><img src="{{ url_for('static', filename='assets/logo_esc_esummit.png') }}"></div>
+        <a href="/buy_ticket">Book Your Ticket</a>
+    </div>
+</body>
+</html>
